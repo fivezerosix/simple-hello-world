@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "react-timer-mixin": "^0.13.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +23,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "localhost:3001"
+  "proxy": "http://localhost:3001"
 }
