@@ -13,11 +13,12 @@ server
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
 
   .get('/hello', (req, res) => {
-    return fetch('').then((response) => {
-      console.log(response.json());
+    return fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => {
+        console.log(response.json());
 
-      return response.json();
-    });
+        res.send(response.json());
+      });
   })
   .get('/*', (req, res) => {
     const markup = renderToString(<App />);
