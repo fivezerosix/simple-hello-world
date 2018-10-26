@@ -1,0 +1,13 @@
+---
+use_compose: true
+
+source_path: "~/Documents/techday/simple-hello-world"
+
+app_name: simple-hello-world
+
+docker_compose_filename: docker-compose.yml
+
+services:
+  - name: backend
+  - name: frontend
+    

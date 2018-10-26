@@ -1,0 +1,15 @@
+aws_access_key: '{{ your_access_key }}'
+
+aws_secret_key: '{{ your_secret_key }}'
+
+aws_region: 'us-east-1'
+
+ec2_instances:
+  - 'name': "docker-instance"
+    'ami': "ami-a4dc46db"
+    'key_name': 'aws-ssh'
+    'dns_hostname': 'true'
+    'security_groups': '["sg-6aa05720"]'
+    'pem_location': '{{ pem_location }}'
+    'user': 'ubuntu'
+    'post_roles': 'aws_ec2_docker'
