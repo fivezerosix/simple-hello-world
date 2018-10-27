@@ -13,4 +13,4 @@ services:
       - 3000
     ports: 
       - 3000:5000
-    command: npm start 
+    command: pm2-runtime start npm -- run start-prod --

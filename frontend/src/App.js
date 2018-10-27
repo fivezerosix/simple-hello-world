@@ -11,14 +11,15 @@ class App extends Component {
       value: ''
     };
   }
+
   componentDidMount() {
     this.intervalID = setInterval(
       () => {
         this.tick();
-        fetch('/hello', {
+          fetch( 'http://'+window.location.hostname+':3001/hello', {
           headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Content-Type': 'text/plain',
+            'Accept': 'text/plain'
            }
         })
         .then((response) => {
@@ -29,8 +30,6 @@ class App extends Component {
         }));
       }, 1000
     );
-
-   
   }
 
   componentWillUnmount() {
